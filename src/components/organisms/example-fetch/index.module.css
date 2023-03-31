@@ -1,6 +1,6 @@
 .fetcher {
-	display: flex;
 	align-items: center;
+	display: flex;
 
 	& > div {
 		margin-left: 1rem;
@@ -8,6 +8,6 @@
 }
 
 .value {
+	color: var(--colour-green);
 	font-weight: bold;
-	color: var(--colorGreen);
 }

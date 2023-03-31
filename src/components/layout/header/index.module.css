@@ -1,7 +1,7 @@
 .header {
-	padding: var(--spacingMedium);
+	padding: var(--spacing-medium);
 
 	& > nav > a {
-		color: var(--colorGreen);
+		color: var(--colour-green);
 	}
 }
