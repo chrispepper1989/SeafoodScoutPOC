@@ -5,22 +5,30 @@ module.exports = {
 		es6: true,
 		jest: true,
 	},
-	parserOptions: { ecmaVersion: 8, sourceType: 'module' },
+	parserOptions: {
+		ecmaVersion: 8,
+		sourceType: 'module',
+	},
 	ignorePatterns: [
 		'node_modules/*',
 		'.next/*',
 		'.husky/*',
 		'.storybook/*',
+		'generators/*',
 		'infrastructure',
 		'public',
 		'!.prettierrc.js',
 	],
-	extends: ['eslint:recommended'],
+	extends: ['eslint:recommended', 'plugin:storybook/recommended'],
 	overrides: [
 		{
 			files: ['**/*.ts', '**/*.tsx'],
 			parser: '@typescript-eslint/parser',
-			settings: { react: { version: 'detect' } },
+			settings: {
+				react: {
+					version: 'detect',
+				},
+			},
 			env: {
 				browser: true,
 				node: true,
@@ -35,9 +43,12 @@ module.exports = {
 			],
 			rules: {
 				'react/no-unescaped-entities': 0,
-				'react/prop-types': 'off', // ts types used instead
-				'react/react-in-jsx-scope': 'off', // no need to import React when using next
-				'jsx-a11y/no-onchange': 'off', // this is only relevant below ie11
+				'react/prop-types': 'off',
+				// ts types used instead
+				'react/react-in-jsx-scope': 'off',
+				// no need to import React when using next
+				'jsx-a11y/no-onchange': 'off',
+				// this is only relevant below ie11
 				'@typescript-eslint/no-var-requires': 'off',
 				'@typescript-eslint/no-unused-vars': ['warn'],
 				'@typescript-eslint/explicit-function-return-type': [

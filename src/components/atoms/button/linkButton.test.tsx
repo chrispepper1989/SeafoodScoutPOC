@@ -1,9 +1,11 @@
+import type { TLinkButton } from './index';
+
 import { render, screen, cleanup } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import { afterEach, describe, expect, test, vi } from 'vitest';
 import { checkA11y } from 'test/test-utils';
 
-import { LinkButton, TLinkButton } from './index';
+import { LinkButton } from './index';
 
 describe('atoms/button(LinkButton)', () => {
 	afterEach(() => {

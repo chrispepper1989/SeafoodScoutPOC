@@ -1,15 +1,12 @@
-import type { ComponentStory, ComponentMeta } from '@storybook/react';
+import type { Meta, StoryObj } from '@storybook/react';
 
-import React from 'react';
 import { ExampleFetch } from './index';
 
-export default {
-	title: 'organisms/example-fetch',
+const meta: Meta<typeof ExampleFetch> = {
+	title: 'organisms/ExampleFetch',
 	component: ExampleFetch,
-} as ComponentMeta<typeof ExampleFetch>;
-
-const Template: ComponentStory<typeof ExampleFetch> = (args) => {
-	return <ExampleFetch {...args} />;
 };
+export default meta;
+type Story = StoryObj<typeof ExampleFetch>;
 
-export const Primary = Template.bind({});
+export const Primary: Story = {};

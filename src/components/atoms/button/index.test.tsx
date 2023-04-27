@@ -1,9 +1,11 @@
+import type { TButton } from './';
+
 import { render, screen, cleanup } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import { afterEach, describe, expect, test, vi } from 'vitest';
 import { checkA11y } from 'test/test-utils';
 
-import { Button, TButton } from './index';
+import { Button } from './';
 
 describe('atoms/button', () => {
 	afterEach(() => {

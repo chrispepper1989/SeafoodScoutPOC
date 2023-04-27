@@ -1,46 +1,39 @@
-import type { ComponentStory, ComponentMeta } from '@storybook/react';
+import type { Meta, StoryObj } from '@storybook/react';
 
-import React from 'react';
 import { Button, ButtonVariant } from './index';
-import styles from './index.module.css';
 
-export default {
-	title: 'atoms/button',
+const meta: Meta<typeof Button> = {
+	title: 'atoms/Button',
 	component: Button,
+	tags: ['autodoc'],
 	argTypes: {
 		variant: {
-			description: 'Controls the style of button',
-			defaultValue: 'primary',
-			control: {
-				type: 'select',
-				options: ['primary', 'secondary'],
+			table: {
+				category: 'Appearance',
 			},
 		},
-		children: {
-			name: 'text',
-			type: { name: 'string', required: false },
-			defaultValue: 'Button',
-			control: {
-				type: 'text',
+		disabled: {
+			table: {
+				category: 'Disabled',
 			},
 		},
-		disabled: {},
 	},
-} as ComponentMeta<typeof Button>;
+};
+export default meta;
+type Story = StoryObj<typeof Button>;
 
-const Template: ComponentStory<typeof Button> = (args) => {
-	return (
-		<div className={styles.storybookBg}>
-			<Button {...args} />
-		</div>
-	);
+// Default Story renderer (only needed where children are required)
+export const Primary: Story = {
+	args: { variant: ButtonVariant.Primary, disabled: false },
+	render: (args) => <Button {...args}>Test Button</Button>,
 };
 
-export const Primary = Template.bind({});
-Primary.args = { variant: ButtonVariant.Primary };
+export const Secondary = {
+	...Primary,
+	args: { ...Primary.args, variant: ButtonVariant.Secondary },
+};
 
-export const Secondary = Template.bind({});
-Secondary.args = { variant: ButtonVariant.Secondary };
-
-export const Disabled = Template.bind({});
-Disabled.args = { variant: ButtonVariant.Primary, disabled: true };
+export const Disabled = {
+	...Primary,
+	args: { ...Primary.args, disabled: true },
+};

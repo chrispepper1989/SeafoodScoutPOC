@@ -23,6 +23,12 @@
 		background-color: var(--colour-white);
 		color: var(--colour-black);
 	}
+
+	&:disabled {
+		background-color: var(--colour-grey);
+		color: var(--colour-black);
+		cursor: default;
+	}
 }
 
 .secondary {

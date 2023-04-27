@@ -1,7 +1,8 @@
 :root {
 	/* colors */
 	--colour-black: #000;
-	--colorur-white: #fff;
+	--colour-white: #fff;
+	--colour-grey: #ddd;
 	--colour-green: #284;
 
 	/* fonts */

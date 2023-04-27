@@ -1,5 +1,8 @@
+import type { TTest } from 'src/api/testMockFetch';
+
 import React from 'react';
-import { fetchTest, TTest } from 'src/api/testMockFetch';
+import { fetchTest } from 'src/api/testMockFetch';
+
 import { Button } from 'src/components/atoms/button';
 import styles from './index.module.css';
 
