@@ -1,6 +1,8 @@
 import type { NextPage } from 'next';
+
 import { Meta } from 'src/components/atoms/meta';
 import { Header } from 'src/components/layout/header';
+
 import styles from './index.module.css';
 
 const HomePage: NextPage = () => {

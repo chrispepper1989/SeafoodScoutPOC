@@ -1,11 +1,11 @@
-import React from 'react';
+import Link from 'next/link';
 import styles from './index.module.css';
 
 export const Header: React.FC = () => {
 	return (
 		<header className={styles.header}>
 			<nav>
-				<a href="/">Home</a> | <a href="/test">Test</a>
+				<Link href="/">Home</Link> | <Link href="/test">Test</Link>
 			</nav>
 		</header>
 	);
