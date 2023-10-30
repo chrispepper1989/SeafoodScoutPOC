@@ -15,7 +15,7 @@ export default defineConfig({
 	},
 	test: {
 		environment: 'jsdom',
-		setupFiles: ['test/test-setup.ts'],
+		setupFiles: ['test/test-setup.js'],
 		include: ['./**/*.{test,spec}.{js,mjs,cjs,ts,mts,cts,jsx,tsx}'],
 		coverage: {
 			reportsDirectory: 'coverage',
