@@ -11,7 +11,7 @@ const HomePage: NextPage = () => {
 			<Meta title="Next starter home" description="The home page" />
 			<Header />
 			<div className={styles.home}>
-				<h1>SFS Homepage!!!!!</h1></h1>
+				<h1>SFS page</h1>
 			</div>
 		</>
 	);
